@@ -1408,20 +1408,20 @@
       <div class="section-eyebrow">Get Started</div>
       <h2>Your Shop Is One Demo Away From <em>Never Doing This Manually Again</em></h2>
       <p>Fill out the form below and we'll set up a free, no-obligation demo at a time that works for you.</p>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <input type="text" placeholder="Your name" required />
-        <input type="text" placeholder="Shop name" required />
-        <input type="email" placeholder="Email address" required />
-        <input type="tel" placeholder="Phone number" />
-        <select>
+      <form class="contact-form" onsubmit="handleSubmit(event)" id="demo-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="text" name="shop" placeholder="Shop name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <input type="tel" name="phone" placeholder="Phone number" />
+        <select name="volume">
           <option value="" disabled selected>How many calibrations do you do per month?</option>
           <option>Less than 20</option>
           <option>20–50</option>
           <option>50–100</option>
           <option>100+</option>
         </select>
-        <textarea placeholder="Anything you'd like us to know before the demo?" rows="3"></textarea>
-        <button type="submit" class="form-submit">Book My Free Demo →</button>
+        <textarea name="message" placeholder="Anything you'd like us to know before the demo?" rows="3"></textarea>
+        <button type="submit" class="form-submit" id="submit-btn">Book My Free Demo →</button>
         <p class="form-note">🔒 No spam. No credit card. Just a real conversation about your shop.</p>
       </form>
     </div>
@@ -1440,12 +1440,34 @@
       if (!isOpen) item.classList.add('open')
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault()
-      const btn = e.target.querySelector('.form-submit')
-      btn.textContent = '✓ Request Sent! We\'ll be in touch shortly.'
-      btn.style.background = '#2a7a4a'
+      const btn = document.getElementById('submit-btn')
+      btn.textContent = 'Sending...'
       btn.disabled = true
+
+      const form = document.getElementById('demo-form')
+      const data = new FormData(form)
+
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/mf@absoluteadas.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data,
+        })
+        const json = await res.json()
+        if (json.success === 'true' || json.success === true) {
+          btn.textContent = '✓ Request Sent! We\'ll be in touch shortly.'
+          btn.style.background = '#2a7a4a'
+          form.reset()
+        } else {
+          throw new Error('Form error')
+        }
+      } catch (err) {
+        btn.textContent = 'Something went wrong — email us directly at mf@absoluteadas.com'
+        btn.style.background = '#888'
+        btn.disabled = false
+      }
     }
 
     // Smooth nav shrink on scroll
