@@ -1000,6 +1000,118 @@
       color: var(--orange);
     }
 
+    /* ── CASE STUDY ───────────────────────────────────────────────────── */
+    .case-study {
+      background: var(--dark-2);
+    }
+
+    .case-study-box {
+      background: var(--dark-3);
+      border: 1px solid rgba(205,68,25,0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 80px rgba(205,68,25,0.08);
+    }
+
+    .case-study-header {
+      background: linear-gradient(135deg, rgba(205,68,25,0.2), rgba(205,68,25,0.05));
+      border-bottom: 1px solid rgba(205,68,25,0.2);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .case-study-badge {
+      background: var(--orange);
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .case-study-header-name {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .case-study-header-sub {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .case-study-body {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .case-study-quote {
+      font-size: 19px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .case-study-attribution {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .case-study-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #CD4419, #e8541f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .case-study-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .case-study-metric {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-left: 3px solid var(--orange);
+      border-radius: 10px;
+      padding: 18px 22px;
+    }
+
+    .case-study-metric-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .case-study-metric-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .case-study-body { grid-template-columns: 1fr; gap: 32px; }
+      .case-study-header, .case-study-body { padding: 24px; }
+    }
+
     /* ── DIVIDER ──────────────────────────────────────────────────────── */
     .divider {
       height: 1px;
@@ -1237,6 +1349,49 @@
           <div class="feature-icon">📁</div>
           <h3>Auto-Documentation & Audit Trail</h3>
           <p>Every invoice creates a Zoho WorkDrive folder with the calibration PDF and a branded ADAS IQ report. Airtight, AI-generated documentation on every single job. Automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY: ABSOLUTE ADAS -->
+  <section class="case-study">
+    <div class="container">
+      <div class="section-eyebrow">Case Study</div>
+      <h2 class="section-title" style="margin-bottom: 40px;">Built In a Real Shop. Proven In the Field.</h2>
+      <div class="case-study-box">
+        <div class="case-study-header">
+          <span class="case-study-badge">Powered by ADAS IQ</span>
+          <div>
+            <div class="case-study-header-name">Absolute ADAS</div>
+            <div class="case-study-header-sub">Mobile ADAS Calibration · Western Washington</div>
+          </div>
+        </div>
+        <div class="case-study-body">
+          <div>
+            <p class="case-study-quote">"ADAS IQ was built inside Absolute ADAS to solve the exact problems we were running into every day — missed calibrations, slow invoicing, and documentation that wouldn't hold up. We couldn't find software that did what we needed, so we built it. Now every job runs through ADAS IQ, and the difference is night and day."</p>
+            <div class="case-study-attribution">
+              <div class="case-study-avatar">MF</div>
+              <div>
+                <div style="font-weight: 700; font-size: 15px;">Mark Fowler</div>
+                <div style="font-size: 13px; color: var(--gray);">Founder — Absolute ADAS & ADAS IQ</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-metrics">
+            <div class="case-study-metric">
+              <div class="case-study-metric-value">60 sec</div>
+              <div class="case-study-metric-label">From PDF upload to completed Zoho invoice — down from 20–28 minutes</div>
+            </div>
+            <div class="case-study-metric">
+              <div class="case-study-metric-value">0</div>
+              <div class="case-study-metric-label">Missed calibrations since switching to AI detection</div>
+            </div>
+            <div class="case-study-metric">
+              <div class="case-study-metric-value">280+</div>
+              <div class="case-study-metric-label">Calibrations processed monthly through ADAS IQ</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
