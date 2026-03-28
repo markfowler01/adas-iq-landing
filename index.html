@@ -917,71 +917,21 @@
       margin: 0 auto 44px;
     }
 
-    /* ── CONTACT FORM ─────────────────────────────────────────────────── */
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 14px 18px;
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      color: white;
-      outline: none;
-      width: 100%;
-      transition: border-color 0.2s;
-    }
-
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      border-color: var(--orange);
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(255,255,255,0.3);
-    }
-
-    .contact-form select option {
-      background: #1e1e1e;
-      color: white;
-    }
-
-    .form-submit {
-      background: var(--orange);
-      color: white;
-      border: none;
-      padding: 16px 36px;
-      border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.2s;
-      width: 100%;
-    }
-
-    .form-submit:hover {
-      background: var(--orange-light);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px rgba(205,68,25,0.4);
-    }
-
-    .form-note {
-      font-size: 13px;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
-    }
+    /* ── ZOHO CRM FORM DARK THEME ─────────────────────────────────────── */
+    #crmWebToEntityForm.zcwf_lblRight { background-color: transparent !important; color: #fff !important; padding: 0 !important; max-width: 100% !important; }
+    #crmWebToEntityForm .zcwf_title { color: #fff !important; font-family: 'Inter', sans-serif !important; font-size: 1.3rem !important; font-weight: 800 !important; padding: 0 0 20px !important; }
+    #crmWebToEntityForm .zcwf_col_lab { width: 100% !important; float: none !important; margin-bottom: 6px !important; text-align: left !important; }
+    #crmWebToEntityForm .zcwf_col_lab label { color: #ccc !important; font-family: 'Inter', sans-serif !important; font-size: .85rem !important; font-weight: 600 !important; }
+    #crmWebToEntityForm .zcwf_col_fld { width: 100% !important; float: none !important; padding: 0 !important; }
+    #crmWebToEntityForm .zcwf_col_fld input[type=text],
+    #crmWebToEntityForm .zcwf_col_fld input[type=email] { width: 100% !important; background: rgba(255,255,255,.06) !important; border: 1px solid rgba(255,255,255,.12) !important; border-radius: 8px !important; padding: 12px 14px !important; color: #fff !important; font-family: 'Inter', sans-serif !important; font-size: .95rem !important; float: none !important; }
+    #crmWebToEntityForm .zcwf_col_fld input[type=text]:focus,
+    #crmWebToEntityForm .zcwf_col_fld input[type=email]:focus { border-color: #CD4419 !important; outline: none !important; box-shadow: 0 0 0 3px rgba(205,68,25,.2) !important; }
+    #crmWebToEntityForm .zcwf_row { margin: 0 0 18px !important; }
+    #crmWebToEntityForm .formsubmit.zcwf_button { background: #CD4419 !important; color: #fff !important; border: none !important; border-radius: 8px !important; padding: 14px 32px !important; font-size: 1rem !important; font-weight: 800 !important; font-family: 'Inter', sans-serif !important; cursor: pointer !important; width: 100% !important; max-width: 100% !important; transition: background .2s !important; }
+    #crmWebToEntityForm .formsubmit.zcwf_button:hover { background: #e8541f !important; }
+    #crmWebToEntityForm .zcwf_button[name=reset] { display: none !important; }
+    .wf_customMessageBox { background: #1a1a1a !important; border-color: rgba(205,68,25,.4) !important; color: #fff !important; }
 
     /* ── FOOTER ───────────────────────────────────────────────────────── */
     footer {
@@ -1563,22 +1513,54 @@
       <div class="section-eyebrow">Get Started</div>
       <h2>Your Shop Is One Demo Away From <em>Never Doing This Manually Again</em></h2>
       <p>Fill out the form below and we'll set up a free, no-obligation demo at a time that works for you.</p>
-      <form class="contact-form" onsubmit="handleSubmit(event)" id="demo-form">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="text" name="shop" placeholder="Shop name" required />
-        <input type="email" name="email" placeholder="Email address" required />
-        <input type="tel" name="phone" placeholder="Phone number" />
-        <select name="volume">
-          <option value="" disabled selected>How many calibrations do you do per month?</option>
-          <option>Less than 20</option>
-          <option>20–50</option>
-          <option>50–100</option>
-          <option>100+</option>
-        </select>
-        <textarea name="message" placeholder="Anything you'd like us to know before the demo?" rows="3"></textarea>
-        <button type="submit" class="form-submit" id="submit-btn">Book My Free Demo →</button>
-        <p class="form-note">🔒 No spam. No credit card. Just a real conversation about your shop.</p>
-      </form>
+      <div id='crmWebToEntityForm' class='zcwf_lblRight crmWebToEntityForm' style='background-color:#0D0D0D;color:#FFFFFF;max-width:100%;'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+        <div class='wf_customMessageBox' id='wf_splash' style='display:none'>
+          <div class='wf_customCircle'><div class='wf_customCheckMark'></div></div>
+          <span id='wf_splash_info'></span>
+        </div>
+        <form id='webform6783709000004587025' name='WebToLeads6783709000004587025' accept-charset='UTF-8'>
+          <input type='text' style='display:none;' name='xnQsjsdp' value='a3cfe38411d1881e4537af2722aa1f46842a09c36e49cf51792dc60b5431856f'/>
+          <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+          <input type='text' style='display:none;' name='xmIwtLD' value='21acb92de5df253547dab389f2ca073fe7d7c44a3d7a8be4ac8db7eb8d2792271c0a48d50fd7fbe14cde60752320aa8c'/>
+          <input type='text' style='display:none;' name='actionType' value='TGVhZHM='/>
+          <input type='text' style='display:none;' name='returnURL' value='null'/>
+          <div class='zcwf_row'>
+            <div class='zcwf_col_lab'><label for='First_Name'>First Name</label></div>
+            <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'/></div>
+          </div>
+          <div class='zcwf_row'>
+            <div class='zcwf_col_lab'><label for='Last_Name'>Last Name <span style='color:#e8541f;'>*</span></label></div>
+            <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'/></div>
+          </div>
+          <div class='zcwf_row'>
+            <div class='zcwf_col_lab'><label for='Email'>Email <span style='color:#e8541f;'>*</span></label></div>
+            <div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' maxlength='100'/></div>
+          </div>
+          <div class='zcwf_row'>
+            <div class='zcwf_col_lab'><label for='Company'>Company</label></div>
+            <div class='zcwf_col_fld'><input type='text' id='Company' name='Company' maxlength='200'/></div>
+          </div>
+          <input type='text' style='display:none;' name='aG9uZXlwb3Q' value=''/>
+          <div class='zcwf_row'>
+            <div class='zcwf_col_lab'></div>
+            <div class='zcwf_col_fld'>
+              <input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Book My Free Demo →' title='Submit'/>
+              <input type='reset' class='zcwf_button' name='reset' value='Reset'/>
+            </div>
+          </div>
+          <script>
+            function validateEmail6783709000004587025(){var form=document.forms['WebToLeads6783709000004587025'];var emailFld=form.querySelectorAll('[ftype=email]');for(var i=0;i<emailFld.length;i++){var emailVal=emailFld[i].value;if((emailVal.replace(/^\s+|\s+$/g,'')).length!=0){var atpos=emailVal.indexOf('@');var dotpos=emailVal.lastIndexOf('.');if(atpos<1||dotpos<atpos+2||dotpos+2>=emailVal.length){alert('Please enter a valid email address.');emailFld[i].focus();return false;}}}return true;}
+            function checkMandatory6783709000004587025(){var mndFileds=new Array('Last Name','Email');var fldLangVal=new Array('Last\x20Name','Email');for(var i=0;i<mndFileds.length;i++){var fieldObj=document.forms['WebToLeads6783709000004587025'][mndFileds[i]];if(fieldObj){if(((fieldObj.value).replace(/^\s+|\s+$/g,'')).length==0){alert(fldLangVal[i]+' cannot be empty.');fieldObj.focus();return false;}}}if(!validateEmail6783709000004587025()){return false;}document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled',true);return true;}
+            $(document).ready(function(){$('#webform6783709000004587025').submit(function(e){var ismandatory=checkMandatory6783709000004587025();e.preventDefault();if(ismandatory){var formData=new FormData(this);$.ajax({url:'https://crm.zoho.com/crm/WebToLeadForm',type:'POST',data:formData,cache:false,contentType:false,processData:false,success:function(data){var splashinfodom=document.getElementById('wf_splash_info');splashinfodom.innerText=data.actionvalue;document.getElementById('webform6783709000004587025').reset.click();document.getElementById('wf_splash').style.display='';setTimeout(function(){document.getElementById('wf_splash').style.display='none';},5000);document.querySelector('.crmWebToEntityForm .formsubmit').removeAttribute('disabled');},error:function(){alert('an error occurred');}});}}); });
+          </script>
+          <!-- Do not remove this --- Analytics Tracking code starts -->
+          <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=e2d29f9e424d06eee5e010f8af89065430cda9151a49493f5d92c7d930ab9645779d5f1dc4cfc78c806be6a5a4035412gidbed0b47752063dbc4f29810e442c8d635531df09fed70b1af999d6396645b465gidbf844bf7f9c0b2bf65a55504a167f5c801a1fec9b873a6ea75e85369b9989352gid4449e27599925ae8972a68caad0a643764e7947d141a6fe9cc1f166459992d5b&tw=a399af8f5bc084a8f0497482b92f80852d15adcde303ef846542a7b8302740ef'></script>
+          <!-- Do not remove this --- Analytics Tracking code ends. -->
+        </form>
+      </div>
     </div>
   </section>
 
