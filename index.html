@@ -1552,9 +1552,13 @@
     e.preventDefault();
     var btn=document.getElementById('iq-brew-btn'),msg=document.getElementById('iq-brew-msg');
     btn.disabled=true;btn.textContent='Subscribing…';msg.textContent='';msg.style.color='';
+    // Form-encoded body avoids CORS preflight — Catalyst gateway strips OPTIONS headers.
+    var params=new URLSearchParams();
+    params.append('email',document.getElementById('iq-brew-email').value);
+    params.append('name',document.getElementById('iq-brew-name').value);
+    params.append('website',document.getElementById('iq-brew-hp').value);
     fetch('https://adas-iq-904191467.development.catalystserverless.com/server/adasiq-api/api/cron/brew/subscribe',{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:document.getElementById('iq-brew-email').value,name:document.getElementById('iq-brew-name').value,website:document.getElementById('iq-brew-hp').value})
+      method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:params.toString()
     }).then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d}})})
       .then(function(r){
         if(r.ok&&r.d.ok){msg.style.color='#4ade80';msg.textContent=r.d.already?'Already subscribed.':'✓ You are in. Check your inbox.';document.getElementById('iq-brew-form').reset();btn.textContent='Subscribed!';}
