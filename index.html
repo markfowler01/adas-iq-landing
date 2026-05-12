@@ -87,7 +87,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -101,21 +101,44 @@
       letter-spacing: 0.01em;
     }
     .nav-links a:hover { color: var(--orange); }
-    @media (max-width: 720px) {
-      .nav-links { display: none; }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
     }
+    .nav-phone {
+      color: rgba(255,255,255,0.85);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .nav-phone:hover { color: var(--orange); }
 
     .nav-cta {
       background: var(--orange);
       color: white;
-      padding: 10px 24px;
+      padding: 10px 22px;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
       transition: background 0.2s;
+      white-space: nowrap;
     }
-
     .nav-cta:hover { background: var(--orange-light); }
+
+    @media (max-width: 920px) {
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 13px; }
+      .nav-phone { display: none; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 14px 18px; flex-wrap: wrap; gap: 10px; }
+      .nav-links { width: 100%; order: 3; justify-content: center; gap: 14px; padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.06); }
+      .nav-links a { font-size: 12.5px; }
+    }
 
     /* ── HERO ─────────────────────────────────────────────────────────── */
     .hero {
@@ -1108,42 +1131,57 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="nav-logo" style="text-decoration:none;color:inherit">
-      <div class="nav-logo-badge">IQ</div>
-      <span class="nav-logo-text">ADAS IQ</span>
+      <div class="nav-logo-badge">AA</div>
+      <span class="nav-logo-text">Absolute ADAS</span>
     </a>
     <ul class="nav-links">
-      <li><a href="/brew">ADAS Brew</a></li>
       <li><a href="/audit">Free Audit Tool</a></li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="/brew">ADAS Brew</a></li>
+      <li><a href="#how">Our Software</a></li>
+      <li><a href="#demo">Request a Demo</a></li>
     </ul>
-    <a href="#demo" class="nav-cta">Request a Demo</a>
+    <div class="nav-right">
+      <a href="tel:+18443492327" class="nav-phone">📞 1-844-FIX-ADAS</a>
+      <a href="/audit" class="nav-cta">Free Audit →</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow">🌍 The World's First AI-Backed ADAS Detection System</div>
-    <h1>Our AI Reads the PDF.<br/><em>Detects Every Calibration.<br/>Invoices in 60 Seconds.</em></h1>
+    <div class="hero-eyebrow">Mobile ADAS Calibration · Western Washington</div>
+    <h1>I run a calibration shop.<br/><em>I built the tools to fight<br/>insurance denials.</em><br/>Now I share them.</h1>
     <p class="hero-sub">
-      No other software on the planet does what ADAS IQ does. Upload any calibration report — our AI engine instantly detects every ADAS system, identifies which calibrations are required, and generates a complete professional invoice automatically. Before the technician leaves the bay.
+      Hi, I'm Mark Fowler. I own Absolute ADAS — mobile ADAS calibration in Western Washington with 50,000+ calibrations on the floor. I spent years figuring out which OEM citations flip insurance denials, which line items get paid, and which procedures keep shops out of court. Now the daily newsletter, the free denial-rebuttal tool, and the software my shop runs on are open to other shops.
     </p>
     <div class="hero-ctas">
-      <a href="#demo" class="btn-primary">Get a Free Demo →</a>
-      <a href="#how" class="btn-secondary">See How It Works</a>
+      <a href="/audit" class="btn-primary">Get a Free Audit (60 sec) →</a>
+      <a href="/brew" class="btn-secondary">Read ADAS Brew</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number"><em>28</em>min</span>
-        <span class="hero-stat-label">Saved Per Invoice vs Manual</span>
+        <span class="hero-stat-number"><em>50,000+</em></span>
+        <span class="hero-stat-label">Calibrations on the Floor</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number"><em>$140K+</em></span>
-        <span class="hero-stat-label">Annual Revenue Protected Per Shop</span>
+        <span class="hero-stat-label">Annual Revenue Protected Per Shop We Sublet With</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number"><em>280+</em></span>
-        <span class="hero-stat-label">Calibrations Processed Monthly</span>
+        <span class="hero-stat-number"><em>5</em>min</span>
+        <span class="hero-stat-label">Daily Read — ADAS Brew Newsletter</span>
       </div>
+    </div>
+  </section>
+
+  <!-- AUDIT CALLOUT — Sabri Godfather Offer, prominent above the next section -->
+  <section style="padding: 36px 24px 24px; max-width: 960px; margin: 0 auto">
+    <div style="background: linear-gradient(135deg, rgba(205,68,25,0.18) 0%, rgba(205,68,25,0.06) 100%); border: 1px solid rgba(205,68,25,0.45); border-radius: 14px; padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 260px;">
+        <div style="font-family: 'Inter', monospace; font-size: 11px; font-weight: 800; letter-spacing: 0.22em; color: var(--orange); text-transform: uppercase; margin-bottom: 8px;">⏰ Free · ~60 second turnaround</div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; line-height: 1.25; margin: 0 0 8px;">Got a denied or short-paid calibration right now?</h3>
+        <p style="font-size: 15px; color: var(--light-gray); line-height: 1.55; margin: 0;">Paste the denial. Get an OEM-cited rebuttal — written, in shop voice, ready to send back to the adjuster. Free. No credit card. ~2-3 shops use it every day.</p>
+      </div>
+      <a href="/audit" style="background: var(--orange); color: #fff; font-weight: 800; font-size: 15px; padding: 16px 28px; border-radius: 8px; text-decoration: none; white-space: nowrap; flex-shrink: 0;">Get the Rebuttal →</a>
     </div>
   </section>
 
@@ -1654,7 +1692,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 <strong>ADAS IQ</strong> by Absolute ADAS · <a href="mailto:info@absoluteadas.com" style="color: var(--gray);">info@absoluteadas.com</a></p>
+    <p>© 2026 <strong>Absolute ADAS</strong> · Mobile ADAS calibration in Western Washington · <a href="mailto:info@absoluteadas.com" style="color: var(--gray);">info@absoluteadas.com</a> · <a href="tel:+18443492327" style="color: var(--gray);">1-844-FIX-ADAS</a></p>
+    <p style="margin-top: 12px; font-size: 13px; color: var(--gray);">ADAS IQ is the software we built to run our shop, now available to others. <a href="/brew" style="color: var(--orange); text-decoration: none; font-weight: 600;">ADAS Brew</a> is our daily newsletter. <a href="/audit" style="color: var(--orange); text-decoration: none; font-weight: 600;">Free Audit Tool</a> is our free public utility.</p>
   </footer>
 
   <script>
