@@ -84,6 +84,27 @@
       letter-spacing: -0.3px;
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.78);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a:hover { color: var(--orange); }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+    }
+
     .nav-cta {
       background: var(--orange);
       color: white;
@@ -1086,10 +1107,16 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">
+    <a href="/" class="nav-logo" style="text-decoration:none;color:inherit">
       <div class="nav-logo-badge">IQ</div>
       <span class="nav-logo-text">ADAS IQ</span>
-    </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/brew">ADAS Brew</a></li>
+      <li><a href="/audit">Free Audit Tool</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
     <a href="#demo" class="nav-cta">Request a Demo</a>
   </nav>
 

@@ -42,6 +42,62 @@
       display: flex;
       flex-direction: column;
     }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 32px;
+      background: rgba(13, 13, 13, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .site-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--white);
+    }
+    .site-nav-badge {
+      width: 30px; height: 30px;
+      background: var(--orange);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 13px;
+      color: #fff;
+    }
+    .site-nav-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .site-nav-links a {
+      color: rgba(255,255,255,0.78);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .site-nav-links a:hover { color: var(--orange); }
+    .site-nav-links a.active { color: var(--orange); }
+    @media (max-width: 560px) {
+      .site-nav { padding: 12px 18px; }
+      .site-nav-links { gap: 14px; }
+      .site-nav-links a { font-size: 13px; }
+    }
     main {
       flex: 1;
       display: flex;
@@ -300,6 +356,17 @@
   </style>
 </head>
 <body>
+  <header class="site-nav">
+    <a href="/" class="site-nav-logo">
+      <span class="site-nav-badge">IQ</span>
+      <span class="site-nav-text">ADAS IQ</span>
+    </a>
+    <nav class="site-nav-links">
+      <a href="/brew" class="active">ADAS Brew</a>
+      <a href="/audit">Free Audit Tool</a>
+      <a href="/">Home</a>
+    </nav>
+  </header>
   <main>
     <div class="card">
       <div class="brand">ADAS Brew · Free, Every Weekday Morning</div>
