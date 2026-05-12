@@ -118,20 +118,92 @@
       line-height: 1.55;
     }
     .credibility strong { color: var(--white); font-weight: 700; }
-    .social-proof {
+
+    .product-preview {
       max-width: 560px;
       margin: 0 auto 32px;
-      padding: 18px 22px;
-      background: rgba(255,255,255,0.03);
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.06);
-      font-size: 15px;
-      color: var(--light-gray);
-      line-height: 1.55;
-      font-style: italic;
+      text-align: center;
     }
-    .social-proof .quote { display: block; margin-bottom: 8px; }
-    .social-proof .attr { display: block; font-style: normal; font-size: 13px; color: var(--gray); }
+    .product-preview-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--gray);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .product-preview-img {
+      display: block;
+      max-width: 280px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    .bonus-block {
+      max-width: 560px;
+      margin: 0 auto 24px;
+      padding: 22px 24px;
+      background: linear-gradient(135deg, rgba(205,68,25,0.14) 0%, rgba(205,68,25,0.06) 100%);
+      border: 1px solid rgba(205,68,25,0.35);
+      border-radius: 12px;
+      color: var(--off-white);
+    }
+    .bonus-tag {
+      display: inline-block;
+      font-family: 'Inter', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: var(--orange);
+      background: rgba(205,68,25,0.12);
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .bonus-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .bonus-desc {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--light-gray);
+    }
+    .bonus-desc em {
+      font-style: normal;
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    .urgency-line {
+      max-width: 560px;
+      margin: 0 auto 14px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--off-white);
+      letter-spacing: 0.01em;
+    }
+
+    .phone-alt {
+      max-width: 560px;
+      margin: 18px auto 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .phone-alt a {
+      color: var(--orange);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .phone-alt a:hover { text-decoration: underline; }
     form {
       display: flex;
       flex-direction: column;
@@ -247,10 +319,18 @@
         <strong>Mark Fowler.</strong> Owner of Absolute ADAS. 50,000+ calibrations on the floor.
       </div>
 
-      <div class="social-proof">
-        <span class="quote">"I learned more about getting calibrations paid in three issues of ADAS Brew than in five years of body shop seminars."</span>
-        <span class="attr">— Production Manager, Phoenix AZ</span>
+      <div class="product-preview">
+        <div class="product-preview-label">Here's what lands in your inbox tomorrow morning:</div>
+        <img src="/brew/images/issue-8.png" alt="Sample ADAS Brew issue cover" class="product-preview-img" />
       </div>
+
+      <div class="bonus-block">
+        <div class="bonus-tag">FREE BONUS · WELCOME GIFT</div>
+        <div class="bonus-headline">The OEM Position Statement Cheat Sheet</div>
+        <div class="bonus-desc">Direct links to 47 manufacturer ADAS calibration procedures — the exact pages that flip denied calibration claims. Yours instantly when you subscribe. <em>Not sold anywhere; only available to ADAS Brew subscribers.</em></div>
+      </div>
+
+      <div class="urgency-line">⏰ Next issue ships tomorrow at 6 AM Pacific. Subscribe to be on it.</div>
 
       <form id="brew-form" onsubmit="return brewSubscribe(event)">
         <input id="brew-email" type="email" name="email" placeholder="Your email *" required autocomplete="email" />
@@ -275,7 +355,9 @@
 
       <div id="brew-msg" class="msg" style="display:none"></div>
 
-      <p class="footer-note"><strong style="color:var(--orange)">100% free forever.</strong> No credit card. We never share your info. One-click unsubscribe.</p>
+      <p class="footer-note"><strong style="color:var(--orange)">Spam-free guarantee.</strong> 100% free forever. One-click unsubscribe. We never share or sell your info.</p>
+
+      <p class="phone-alt">Prefer to talk? Call or text <a href="tel:+18443492327">1-844-FIX-ADAS</a> (1-844-349-2327).</p>
 
       <div class="ps">
         <strong>P.S.</strong> Most readers find at least one calibration line item they were leaving on the table in the first issue. Pays for itself before you finish your second cup of coffee.
