@@ -747,7 +747,7 @@ async function handleSubmit() {
   btn.textContent = 'Sending…';
 
   try {
-    await fetch('https://api.adas-iq.com/api/early-access', {
+    await fetch('https://adas-iq-904191467.development.catalystserverless.com/server/adasiq-api/api/early-access', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ name, company, email, pain })
