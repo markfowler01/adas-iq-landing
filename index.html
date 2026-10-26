@@ -88,6 +88,10 @@
       transition: background 0.15s;
     }
     .nav-cta:hover { background: var(--orange-light); }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-link { font-size: 13px; font-weight: 600; color: #aaa; text-decoration: none; }
+    .nav-link:hover { color: #fff; }
+    @media (max-width: 600px) { .nav-link { display: none; } }
 
     /* HERO */
     .hero {
@@ -505,7 +509,10 @@
       <div class="logo-wordmark">ADAS <span>IQ</span></div>
       <div class="logo-by">by Absolute ADAS</div>
     </a>
-    <a href="#apply" class="nav-cta">Get early access →</a>
+    <div class="nav-right">
+      <a href="/posts/" class="nav-link">Field Notes</a>
+      <a href="#apply" class="nav-cta">Get early access →</a>
+    </div>
   </div>
 </nav>
 
@@ -721,7 +728,7 @@
       <div class="footer-logo">ADAS <span>IQ</span></div>
     </div>
     <div class="footer-by">
-      A product of <a href="https://absoluteadas.com" target="_blank" rel="noopener">Absolute ADAS</a> · Software in development
+      <a href="/posts/">Field Notes</a> · A product of <a href="https://absoluteadas.com" target="_blank" rel="noopener">Absolute ADAS</a> · Software in development
     </div>
   </div>
 </footer>
