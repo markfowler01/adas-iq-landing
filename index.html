@@ -24,6 +24,7 @@
     }
 
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 72px; }
 
     body {
       font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif;
@@ -766,6 +767,22 @@ async function handleSubmit() {
   document.getElementById('earlyAccessForm').style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
 }
+
+// Scroll in-page links with JS too: plain #anchors do nothing in some in-app
+// browsers (LinkedIn, Facebook, Instagram) and inside embedded frames.
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (e) {
+    const id = a.getAttribute('href').slice(1);
+    const target = id && document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    try { history.replaceState(null, '', '#' + id); } catch (err) {}
+    if (id === 'apply') {
+      setTimeout(function () { document.getElementById('name').focus({ preventScroll: true }); }, 700);
+    }
+  });
+});
 </script>
 
 </body>
