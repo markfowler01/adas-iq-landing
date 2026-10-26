@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 START = datetime.date(2026, 10, 26)  # Monday of week 1
 URL = "https://adas-iq.com/#apply"
 
-LI_CTA = f"We're opening ADAS IQ to a small group of independent operators. Join the pilot: {URL}"
+LI_CTA = f"Pilot program open for independent mobile ADAS operators. Request early access: {URL}"
 FB_CTA = f"Pilot program open. Request early access: {URL}"
 IG_CTA = "Pilot program open. Request early access, link in bio or adas-iq.com"
 SIGN = "Built inside Absolute ADAS, where it runs the business every day."
@@ -226,11 +226,12 @@ h1{{font-size:{size}px;font-weight:900;line-height:1.08;letter-spacing:-.03em;co
 .bar{{width:120px;height:8px;background:#CD4419;border-radius:4px;margin-top:56px}}
 .foot{{display:flex;justify-content:space-between;align-items:center;position:relative;
 border-top:2px solid #2a2a2a;padding-top:40px;font-size:26px;color:#aaa}}
-.cta{{background:#CD4419;color:#fff;font-weight:700;padding:16px 30px;border-radius:12px}}
+.cta{{color:#fff;font-weight:700}}
+.cta b{{color:#CD4419}}
 </style></head><body>
 <div class="logo">ADAS <span>IQ</span><small>by Absolute ADAS</small></div>
 <div class="main"><div class="kicker">{kicker}</div><h1>{headline}</h1><div class="bar"></div></div>
-<div class="foot"><span>adas-iq.com</span><span class="cta">Pilot program open →</span></div>
+<div class="foot"><span>Pilot program open</span><span class="cta">Join at <b>adas-iq.com</b></span></div>
 </body></html>"""
 
 

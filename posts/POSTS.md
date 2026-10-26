@@ -17,7 +17,7 @@ So we built ADAS IQ inside Absolute ADAS. It runs our jobs, our dispatch and our
 
 Every feature exists because we needed it on a real job.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -68,7 +68,7 @@ ADAS IQ routes calls and texts to the right person, sends job alerts by SMS, and
 
 A missed text shouldn't be a missed job.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -119,7 +119,7 @@ The ADAS IQ job board updates live, so you stop asking "where are we on that Tah
 
 If the only status board is in your head, you can't take a day off.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -170,7 +170,7 @@ ADAS IQ builds invoices from the job data. What was done is what gets billed.
 
 The calibration is the hard part. Billing for it shouldn't be.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -221,7 +221,7 @@ ADAS IQ keeps billing rules per shop and per insurer, and applies them to every 
 
 Write the rule once. Stop remembering it on every job.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -272,7 +272,7 @@ ADAS IQ reviews CCC and carrier estimates for missing ADAS lines, with the right
 
 Catch it on the estimate, not after the car's gone.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -323,7 +323,7 @@ ADAS IQ attaches the documentation to every job, while the job is happening.
 
 Documentation you can find is documentation that gets you paid.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -374,7 +374,7 @@ ADAS IQ keeps a profile for every shop, so anyone on your team can pick up the r
 
 Your shop relationships are the business. Keep them somewhere real.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -425,7 +425,7 @@ ADAS IQ helps you run the job, and every job after it: job board, dispatch, bill
 
 Getting the job is half of it. Running it is the other half.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -476,7 +476,7 @@ ADAS IQ is built around how mobile ADAS companies actually work, because it runs
 
 If you run the van and the books, this was built for you.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -527,7 +527,7 @@ It had to work, or we didn't get paid.
 
 We'd rather show you how it runs our shop than pitch you on a slide.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
@@ -578,7 +578,7 @@ No credit card. No commitment. No automated sales sequence. Tell us your biggest
 
 If you run a mobile ADAS calibration business, we want to talk.
 
-We're opening ADAS IQ to a small group of independent operators. Join the pilot: https://adas-iq.com/#apply
+Pilot program open for independent mobile ADAS operators. Request early access: https://adas-iq.com/#apply
 
 Built inside Absolute ADAS, where it runs the business every day.
 
